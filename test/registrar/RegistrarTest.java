@@ -81,6 +81,15 @@ class RegistrarTest {
        });       
     }
 
+    @Test
+    void clientsCannotModifyRosters() {
+       assertThrows(UnsupportedOperationException.class, ()->{
+        comp127.getRoster().add(sally);
+       });       
+    }
+
+
+
 
 
     // ------ Post-test invariant check ------
